@@ -1,0 +1,21 @@
+.title {
+    font-weight: bold;
+    color: #FFFFFF;
+    line-height: 60px;
+    font-size: 36px;
+    &_big {
+        font-size: 48px;
+    }
+    &_sub {
+        font-size: 16px;
+        line-height: 24px;
+        position: relative;
+        z-index: 1;
+        padding-left: 10px;
+        @include before_circle;
+    }
+    &_min {
+        font-size: 14px;
+        line-height: 21px;
+    }
+}
