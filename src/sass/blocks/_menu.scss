@@ -1,0 +1,128 @@
+.hamburger {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    height: 21px;
+    width: 36px;
+    cursor: pointer;
+    &:hover {
+        transform: scale(1.05);
+        transition: 0.6s all;
+    }
+    span {
+        display: block;
+        margin-bottom: 6px;
+        margin-left: auto;
+        width: 30px;
+        height: 3px;
+        background-color: #fff;
+    }
+    span.long {
+        width: 36px;
+    }
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100vh;
+    z-index: 10;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .6s;
+    &_active {
+        left: 0;
+        visibility: visible;
+        opacity: 1;
+    }
+    &__block {
+        position: relative;
+        width: 345px;
+        background-color: $promo-color;
+        height: 100%;
+        transition: all .6s;
+        padding: 140px 0 50px 40px;
+        z-index: 10;
+    }
+    &__close {
+        svg path {
+            fill: #fff;
+        }
+        position: absolute;
+        top: 25px;
+        right: 25px;
+        cursor: pointer;
+        &:hover {
+            transform: scale(1.05);
+            transition: 0.6s all;
+        }
+    }
+    &__list {
+        margin-bottom: 0;
+        padding-left: 35px;
+        list-style-type: none;
+    }
+    &__link {
+        position: relative;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 36px;
+        margin-bottom: 15px;
+        a {
+            color: #FFFFFF;
+            text-decoration: none;
+        }
+        &:before {
+            content: '';
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            border-radius: 100%;
+            border: 1px solid #fff;
+            left: -35px;
+            top: 12px;
+            transition: all .6s;
+        }
+        &:hover {
+            &:before {
+                background-color: #fff;
+            }
+        }
+    }
+    &__social {
+        position: absolute;
+        width: 90px;
+        bottom: 85px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        a {
+            width: 20px;
+            svg {
+                width: 100%;
+            }
+            svg path {
+                fill: #fff;
+                transition: 0.6s all;
+            }
+            &:hover {
+                svg {
+                    transition: 0.6s all;
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+    &__overlay {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba($color: #fff, $alpha: 0.75);
+        z-index: 5;
+    }
+}

@@ -1,11 +1,8 @@
 .title {
     font-weight: bold;
-    color: #FFFFFF;
+    color: #000;
     line-height: 60px;
     font-size: 36px;
-    &_big {
-        font-size: 48px;
-    }
     &_sub {
         font-size: 16px;
         line-height: 24px;
@@ -14,8 +11,26 @@
         padding-left: 10px;
         @include before_circle;
     }
-    &_min {
+    &_white {
+        color: #fff;
+    }
+    &_center {
+        text-align: center;
+        padding-left: 0;
+        &:before {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+    &_fz14 {
         font-size: 14px;
         line-height: 21px;
+    }
+    &_fz20 {
+        font-size: 20px;
+        line-height: 30px;
+    }
+    &_fz48 {
+        font-size: 48px;
     }
 }

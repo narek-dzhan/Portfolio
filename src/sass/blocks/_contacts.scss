@@ -1,0 +1,115 @@
+.contacts {
+    padding: 120px 0 90px 0;
+    &__photo {
+        width: 100%;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &__wrapper {
+        display: grid;
+        grid-template-columns: 400px 585px;
+        column-gap: 68px;
+        padding: 0 35px 0 52px;
+    }
+    &__descr {
+        .divider {
+            margin: 0;
+        }
+    }
+    &__text, &__social {
+        margin-top: 20px;
+    }
+    &__link {
+        margin-right: 25px;
+        text-decoration: none;
+        &:hover {
+            svg {
+                transform: scale(1.05);
+            }
+        }
+        svg {
+            max-width: 30px;
+            max-height: 30px;
+            transition: 0.6s all;
+        }
+    }
+    &__form {
+        margin-top: 30px;
+        display: grid;
+        grid-template: 45px 190px 45px / repeat(2, 280px);
+        column-gap: 30px;
+        row-gap: 28px;
+        label {
+            display: block;
+            position: absolute;
+            height: 18px;
+            padding: 0 8px;
+            background-color: #fff;
+            font-size: 12px;
+            top: -8px;
+            left: 12px;
+        }
+    }
+    &__input {
+        position: relative;
+        input {
+            width: 100%;
+            height: 100%;
+            padding: 0 20px;
+            font-size: 12px;
+        }
+    }
+    &__textarea {
+        position: relative;
+        grid-column: 1 / 3;
+        textarea {
+            width: 100%;
+            height: 100%;
+            resize: none;
+            padding: 20px;
+            font-size: 12px;
+        }
+    }
+    &__triggers {
+        grid-column: 1 / 3;
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        column-gap: 35px;
+    }
+    &__btn {
+        border: none;
+        font-weight: 700;
+        font-size: 14px;
+        transition: 0.6s all;
+        color: #000;
+        &:hover {
+            background: #9bbed2;
+        }
+    }
+    &__policy {
+        position: relative;
+        font-size: 12px;
+        display: flex;
+        align-items: center;
+        input {
+            margin-right: 10px;
+            cursor: pointer;
+        }
+        #checkbox-error {
+            position: absolute;
+            top: -10px;
+        }
+    }
+    .error {
+        border: 1px solid red;
+    }
+    label.error {
+        position: absolute;
+        border: none;
+        top: -22px;
+        color: red;
+    }
+}

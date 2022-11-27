@@ -1,0 +1,98 @@
+.resume {
+    padding-top: 120px;
+    &__sub {
+        text-align: center;
+    }
+    &__wrapper {
+        display: grid;
+        margin-top: 60px;
+        grid-template-columns: repeat(2, 425px);
+        column-gap: 160px;
+        padding: 0 65px;
+    }
+    &__column {
+        &-title {
+            position: relative;
+            padding-left: 43px;
+            margin-bottom: 0;
+            &:before {
+                content: '';
+                width: 15px;
+                height: 15px;
+                border-radius: 100%;
+                background-color: $main-color;
+                position: absolute;
+                left: -7px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+        ul {
+            list-style-type: none;
+            margin-bottom: 0;
+            margin-left: 0;
+            padding-left: 0;
+            li {
+                position: relative;
+                &:after {
+                    content: '';
+                    width: 1px;
+                    height: calc(100% + 8px);
+                    position: absolute;
+                    top: -8px;
+                    left: 0;
+                    background-color: #000;
+                }
+            }
+        }
+    }
+    &__item {
+        position: relative;
+        display: grid;
+        grid-template-rows: repeat(2, minmax(85px, auto));
+        grid-auto-rows: minmax(85px, auto);
+        &:before {
+            position: absolute;
+            content: '';
+            height: 1px;
+            width: 43px;
+            left: 0;
+            top: 46px;
+            background-color: #000;
+        }
+        &-head {
+            position: relative;
+            padding: 25px 0 0 100px;
+            h4 {
+                margin-bottom: 0;
+            }
+        }
+        &-text {
+            padding-left: 43px;
+            margin-top: 12px;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 18px;
+        }
+        &-icon {
+            position: absolute;
+            top: 28px;
+            left: 43px;
+            width: 36px;
+            height: 36px;
+            @include before_circle;
+            &:before {
+                bottom: 0;
+            }
+            img {
+                margin-top: 14px;
+                margin-left: 18px;
+            }
+        }
+        &-sub {
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 18px;
+        }
+    }
+}

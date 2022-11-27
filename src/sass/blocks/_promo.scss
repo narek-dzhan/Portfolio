@@ -1,16 +1,21 @@
 .promo {
     min-height: 100vh;
     position: relative;
-    background: url("../img/main_bg.jpg") center (center/cover) no-repeat;;
-    padding-top: 490px;
+    background: url("../img/main_bg.jpg") no-repeat 50%/cover;;
+    padding-top: 300px;
     &__title {
         width: 535px;
         margin-top: 10px;
     }
+    &__sub {
+        &:before {
+            background-color: $promo-color;
+        }
+    }
     &__btns {
         margin-top: 25px;
         display: flex;
-        width: 250px;
+        width: 270px;
         align-items: center;
         justify-content: space-between;
     }
@@ -20,8 +25,9 @@
         line-height: 21px;
         color: #FFFFFF;
         text-decoration: none;
+        border: 2px solid #fff;
         &:hover {
-            color: #FFFFFF;
+            transform: scale(1.05);
         }
     }
 }
