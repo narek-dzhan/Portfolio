@@ -22,9 +22,20 @@
     &__text, &__social {
         margin-top: 20px;
     }
+    &__social {
+        div {
+            width: 150px;
+            display: flex;
+            justify-content: space-between;
+        }
+    }
     &__link {
+        width: 30px;
         margin-right: 25px;
         text-decoration: none;
+        &:nth-last-child(1) {
+            margin-right: 0;
+        }
         &:hover {
             svg {
                 transform: scale(1.05);

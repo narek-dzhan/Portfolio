@@ -55,10 +55,14 @@ $(document).ready(function(){
         }
       });
 
+      $('.modal__close').on('click', function() {
+        $('.overlay, #thanks').fadeOut('slow');
+      });
+
       $('form').submit(function(e) {
         e.preventDefault();
     
-        if(!$(this).validate()) {
+        if(!$(this).valid()) {
           return;
         };
     

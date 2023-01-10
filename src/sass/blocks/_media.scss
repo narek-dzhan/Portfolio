@@ -230,14 +230,8 @@
             margin: 0 auto;
         }
         &__social {
-            display: flex;
             div {
                 margin: 0 auto;
-            }
-        }
-        &__link {
-            &:nth-last-child(1) {
-                margin-right: 0;
             }
         }
         &__text {

@@ -40,7 +40,7 @@ $(document).ready(function(){
   });
 
   $('.modal__close').on('click', function() {
-    $('.overlay, #consultation, #thanks, #order').fadeOut('slow');
+    $('.overlay, #thanks').fadeOut('slow');
   });
 
   // $('.button_mini').on('click', function() {
@@ -90,7 +90,7 @@ $(document).ready(function(){
   $('form').submit(function(e) {
     e.preventDefault();
 
-    if(!$(this).validate()) {
+    if(!$(this).valid()) {
       return;
     };
 
